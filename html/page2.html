@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>navigator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .wrapper {
+            min-height: 100vh;
+        }
+        .hide {
+            position: relative;
+        }
+        .hide:hover .table {
+            display: table;
+            position: absolute;
+            background: navy;
+            outline: 4px solid hsla(0, 100%, 100%, 0.8);
+        }
+        .table {
+            display: none;
+            /* width: 500px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>navigator</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/ru/docs/Web/API/Navigator">Документация на MDN</a></li>
+            <li id="online"><a href="#">window.navigator.onLine </a> <span class="comment">браузер в online ? true : false</span></li>
+            <li id="platform"><a href="#">window.navigator.userAgent</a> <span class="comment">тип и версия браузера</span></li>
+            <li id="cookie"><a href="#">window.navigator.cookieEnabled</a></li>
+            <li id="geo">
+                <ul>
+                    <li>
+                        <a href="#">window.navigator.geolocation</a> <span class="comment">определение getCurrentPosition и  отслеживание изменений watchPosition </span>
+                    </li>
+                    <li>
+                        Отобразить свое положение  <a href="https://codepen.io/Gorbulin/pen/QBgbXo">на карте гугл</a>
+                    </li>
+                    <li>
+                        Отобразить свой адрес <a href="./city.html">с помощью сервиса гугл</a>
+                    </li>
+                    <li class="hide">
+                        База данных по названию городов с геокоординатами <a href="http://download.geonames.org/export/dump/">здесь</a>
+                        <table class="table">
+                            <tr>
+                                <th>Files :</th>
+                                <th>Features:</th>
+                            </tr>
+                            <tr>
+                                <td>allCountries.zip</td>
+                                <td>all countries combined in one file, see 'geoname' table for columns</td>
+                            </tr>
+
+                            <tr>
+                                <td>cities1000.zip</td>
+                                <td>all cities with a population &gt; 1000 or seats of adm div (ca 150.000)</td>
+                            </tr>
+                            <tr>
+                                <td>cities5000.zip</td>
+                                <td>all cities with a population &gt; 5000 or PPLA (ca 50.000)</td>
+                            </tr>
+                            <tr>
+                                <td>cities15000.zip </td>
+                                <td>all cities with a population &gt; 15000 or capitals (ca 25.000)</td>
+                            </tr>
+                            <tr>
+                                <td>alternateNamesV2.zip</td>
+                                <td>alternate names with language codes and geonameId, file with iso language codes, with new columns from and to</td>
+                            </tr>
+                            <tr>
+                                <td>timeZones.txt </td>
+                                <td>countryCode, timezoneId, gmt offset on 1st of January, dst offset to gmt on 1st of July (of the current year), rawOffset without DST</td>
+                            </tr>
+                            <tr>
+                                <td>countryInfo.txt  </td>
+                                <td>country information : iso codes, fips codes, languages, capital ,...</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </li>
+            <li id="language"><a href="#">window.navigator.language</a> <span class="comment">как правило это язык интерфейса браузера</span></li>
+            <li id="oscpu"><a href="#">window.navigator.oscpu || window.navigator.platform</a> <span class="comment">текущая ОС</span></li>
+            <li id="media"><a href="#">window.navigator.mediaDevices</a> <span class="comment">Возващает Promise, который будет изучаться позднее. В случае, если Promise вернет ответ без ошибки, то будет предоставлен доступ к микрофону, веб-камере и т.п. мультимедийным устройствам</span> 
+                <p><a href="https://developers.google.com/web/updates/2015/10/media-devices">статья об использовании navigator.mediaDevices</a> и <a href="https://webrtc.github.io/samples/src/content/getusermedia/gum/">пример</a> использования</p>
+            </li>
+            <!-- <li><a href="#" id="resume">итоги</a></li> -->
+        </ul>
+        <div class="result attention"></div>
+        <div class="text">
+          <h4>итоги</h4>
+          <ol>
+              <!-- <li>Блокирование веб-страницы методом alert/prompt/confirm</li>
+              <li>методы открытия/закрытия веб-старницы</li>
+              <li>методы setTimeout и setInterval в браузерах НЕ являются частью языка JS</li>
+              <li>методы setTimeout и setInterval вызванные из любой функции и объекта остаются глобальными</li> -->
+          </ol>
+       </div>
+    </div>
+    <a href="../index.html" class="back">back</a>
+   <script src="../js/page2.js"></script>
+</body>
+</html>

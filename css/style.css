@@ -1,0 +1,12 @@
+.img-wrp {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.img-wrp img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  height: auto;
+}

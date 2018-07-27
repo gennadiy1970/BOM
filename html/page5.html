@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>history</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>history</h2>
+        <ul  id="his">
+            <li id="loc"><a href="#">window.history.length</a> </li>
+            <li id="bac"><a href="#">window.history.back() </a></li>
+            <li id="got"><a href="#">window.history.go(-1)</a> <span class="comment">// -1 то же что и back. Но можно задать любое число</span></li>
+            <li id="frw"><a href="#">window.history.forward()</a></li>
+            <li> <span class="red">window.history.pushState()</span> <span class="coment">// создание в history новой (возможно не сущестующей) страницы и запись объекта на событие посещения этой страницы</span></li>
+            <li><span class="red">window.history.replaceState()</span> </li>
+            <li>Событие <span class="red">window.onpopstate</span> </li>
+        </ul>
+        <div class="result attention"></div>
+    </div>
+    <a href="../index.html" class="back">back</a>
+   <script src="../js/page5.js"></script>
+</body>
+</html>

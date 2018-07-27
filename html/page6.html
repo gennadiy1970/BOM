@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feature detection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Feature detection</h2>
+        <p>Работа со свойствами и методми, которые могут не поддерживаться браузером</p>
+        <h4>Замена не существующего свойтва или метода</h4>
+        <pre><kbd>let os = window.navigator.oscpu || window.navigator.platform</kbd></pre>
+        <p>Chrome не поддерживает метод <kbd>navigator.oscpu</kbd>, поэтому вызов этого метода вернет <b class="red">fasly</b> значение, что приведет к вызову метода
+         <kbd>window.navigator.platform</kbd></p>
+        <h4>Запуск метода в определеном браузере</h4>
+        <p>Это не рекомендуемый, но допустимый способ вызова функций. Как вы думаете, почему этот способ хуже предыдущего?</p>
+        <pre><kbd>
+        let os = "";
+
+        if(navigator.userAgent.indexOf("Chrome") &gt; 0) {
+            os = window.navigator.platform
+        }
+        if(navigator.userAgent.indexOf("Firefox") &gt; 0) {
+            os = window.navigator.oscpu
+        }
+        </kbd></pre>
+    </div>
+    <a href="../index.html" class="back">back</a>
+   <script src="../js/page5.js"></script>
+</body>
+</html>

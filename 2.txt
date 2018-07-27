@@ -1,0 +1,8 @@
+
+Занятие 2:
+- BOM
+- HTML5 history
+- Feature detection
+- Доступ к геопозиции
+
+

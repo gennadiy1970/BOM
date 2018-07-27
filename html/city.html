@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Get address by Geolocation</title>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <link rel="stylesheet" href="../css/common.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <form action="#">
+      <h4>Точность геокординат</h4>
+      <input type="range" name="accurcy" id="accur" value="0" min="0" max="6" step="1">
+    </form>
+    <ul>
+      <li>latitude: <span id="lat"></span></li>
+      <li>longitude: <span id="lon"></span> </li>
+    </ul>
+    <p> <button id="glc">get Geolocation</button> </p>
+    <p id="res"></p>
+  </div>
+  <script src="../js/city.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>window</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>window</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/window">Документация на MDN</a></li>
+            <li id="confirm"><a href="#">window.confirm(message)</a></li>
+            <li id="prompt"><a href="#">window.prompt(message, default)</a></li>
+            <li id="alert"><a href="#">window.alert(message)</a></li>
+            <li id="open"><a href="#">window.open(url)</a> 
+                <span class="comment">https://www.goit.ua/</span>
+                <p>Связь между окнами – двухсторонняя:</p>
+                <p><kbd>var linkToNewWin = window.open("about:blank", "", "width=200,height=200");</kbd></p>
+                <p><kbd>var linkToOldWin = window.opener</kbd></p>
+                <p>Same Origin Policy</p>
+                <h4>Перемещение одного окна</h4>
+                <p>Окно, созданное с помощью window.open можно перемещать:</p>
+                <ul>
+                    <li>относительно текущего положения: <kbd>moveBy(x, y);</kbd> <span class="comment">// moveBy(50, -50)</span></li>
+                    <li>относительно экрана: <kbd>moveTo(x, y);</kbd> <span class="comment">// moveTo(50, -50)</span></li>
+                </ul>
+                <p>Окну, созданному с помощью window.open можно изменять размер:</p>
+                <ul>
+                    <li>относительно текущего положения: <kbd>resizeBy(width,height);</kbd> <span class="comment">// resizeBy(50, -50)</span></li>
+                    <li>относительно экрана: <kbd>resizeTo(width,height);</kbd> <span class="comment">// resizeTo(50, -50)</span></li>
+                </ul>
+                <h4>Прокрутка окна</h4>
+                <ul>
+                    <li>scrollBy(x,y)</li>
+                    <li>scrollTo(x,y)</li>
+                    <li>elem.scrollIntoView(top) <span class="comment">//  верх элемента совпадает с верхом окна</span></li>
+                </ul>
+            </li>
+            <li id="close"><a href="#">window.close()</a> <span class="comment">linkToNewWin.close()</span></li>
+            <li id="timeout"><a href="#">window.setTimeout(callback, ms)</a></li>
+            <li id="interval"><a href="#">window.setInterval(callback, ms)</a></li>
+            <li><a href="#" id="resume">итоги</a></li>
+        </ul>
+        <div class="result attention"></div>
+        <div class="text">
+          <h4>итоги</h4>
+          <ol>
+              <li>Блокирование веб-страницы методом alert/prompt/confirm</li>
+              <li>методы открытия/закрытия веб-старницы</li>
+              <li>методы setTimeout и setInterval в браузерах НЕ являются частью языка JS</li>
+              <li>методы setTimeout и setInterval вызванные из любой функции и объекта остаются глобальными</li>
+          </ol>
+       </div>
+    </div>
+    <a href="../index.html" class="back">back</a>
+   <script src="../js/page1.js"></script>
+</body>
+</html>

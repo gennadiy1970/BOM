@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>frames</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>frames</h2>
+        <p><kbd>window.frames</kbd> возвращает объект <span class="red">window</span> в виде объекта схожего с массивом.
+        Необходим как способ обратиться к элементам окна, если другой способ (через API DOM) невозможен из-за кроссдоменного ограничения или затруднен</p>
+        <p>Откройте консоль для просмотра <kbd>window.frames</kbd> в текущем окне</p>
+       
+    </div>
+    <a href="../index.html" class="back">back</a>
+   <script>
+       console.log("window.frames = " , window.frames)
+       console.log(" Object.keys(window.frames) = " , Object.keys(window.frames))
+   </script>
+</body>
+</html>
